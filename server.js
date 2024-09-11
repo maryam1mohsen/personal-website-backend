@@ -14,6 +14,7 @@ const portfoliosRouter = require('./controllers/portfolios');
 const blogsRouter = require('./controllers/blogs');
 const contactMeRouter = require('./controllers/contactMe');
 const commentsRouter = require('./controllers/comments');
+const userRouter = require('./controllers/user'); 
 
 const app = express();
 const PORT = process.env.PORT || 3005;
@@ -27,7 +28,7 @@ app.use('/portfolios', portfoliosRouter);
 app.use('/blogs', blogsRouter);
 app.use('/contact-me', contactMeRouter);
 app.use('/comments', commentsRouter);
-
+app.use('/users', userRouter);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
